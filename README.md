@@ -7,7 +7,7 @@ A high-precision Bash application that manages salon bookings using a PostgreSQL
 * **Database:** PostgreSQL
 * **CLI Tool:** `psql` (utilizing `--no-align` and `--tuples-only` for strict output formatting)
 
-## Database Schema
+## Database Schema 
 
 The system relies on a relational schema designed for data integrity and specific naming conventions (e.g., `table_name_id` primary keys).
 
