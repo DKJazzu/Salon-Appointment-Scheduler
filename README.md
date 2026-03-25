@@ -3,7 +3,7 @@
 A high-precision Bash application that manages salon bookings using a PostgreSQL backend.
 
 ## Tech Stack
-* **Shell:** Bash (Bourne Again SHell)
+* **Scripting:** Bash (Bourne Again SHell)
 * **Database:** PostgreSQL
 * **CLI Tool:** `psql` (utilizing `--no-align` and `--tuples-only` for strict output formatting)
 
