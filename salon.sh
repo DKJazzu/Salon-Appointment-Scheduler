@@ -15,6 +15,14 @@ MAIN_MENU() {
 
   # read service choice
   read SERVICE_ID_SELECTED
+
+  # numeric check
+  if ! [[ $SERVICE_ID_SELECTED =~ ^[0-9]+$ ]]; then
+    echo -e "\nPlease enter a valid number."
+    MAIN_MENU
+    return
+  fi
+  
   SERVICE_NAME=$($PSQL "SELECT name FROM services WHERE service_id=$SERVICE_ID_SELECTED;")
 
   # invalid service
