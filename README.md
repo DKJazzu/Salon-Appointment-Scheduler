@@ -16,7 +16,7 @@ The system relies on a relational schema designed for data integrity and specifi
 * **services:** A catalog of available salon treatments (cut, color, etc.).
 * **appointments:** A junction table linking customers and services with a specific time.
 
-## Setup Instructions
+## Installation & Setup
 
 ### 1. Database Initialization
 To rebuild the database, log into your PostgreSQL instance and run:
