@@ -17,7 +17,7 @@ MAIN_MENU() {
   read SERVICE_ID_SELECTED
 
   # numeric check
-  if ! [[ $SERVICE_ID_SELECTED =~ ^[0-9]+$ ]]; 
+  if ! [[ "$SERVICE_ID_SELECTED" =~ ^[0-9]+$ ]] 
   then
     echo -e "\nPlease enter a valid number."
     MAIN_MENU
@@ -27,7 +27,7 @@ MAIN_MENU() {
   SERVICE_NAME=$($PSQL "SELECT name FROM services WHERE service_id=$SERVICE_ID_SELECTED;")
 
   # invalid service
-  if [[ -z $SERVICE_NAME ]]
+  if [[ -z "$SERVICE_NAME" ]]
   then
     echo -e "\nI could not find that service. What would you like today?"
     MAIN_MENU
@@ -39,7 +39,7 @@ MAIN_MENU() {
     CUSTOMER_NAME=$($PSQL "SELECT name FROM customers WHERE phone='$CUSTOMER_PHONE';")
 
     # new customer
-    if [[ -z $CUSTOMER_NAME ]]
+    if [[ -z "$CUSTOMER_NAME" ]]
     then
       echo -e "\nI don't have a record for that phone number, what's your name?"
       read CUSTOMER_NAME
